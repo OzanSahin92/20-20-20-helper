@@ -10,3 +10,6 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 	- based on screen inactivity pause the Timer
 	- if screen changed to active again, resume the Timer or restart it
 - add CI with Dockerfile
+
+## dependencies
+- install gtmm: sudo apt-get install libgtkmm-3.0-dev
