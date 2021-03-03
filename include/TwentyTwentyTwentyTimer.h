@@ -2,14 +2,14 @@
 // Created by mrerzincan on 13.12.20.
 //
 
-#ifndef INC_20_20_20_HELPER_TIMER_H
-#define INC_20_20_20_HELPER_TIMER_H
+#ifndef INC_20_20_20_HELPER_TWENTYTWENTYTWENTYTIMER_H
+#define INC_20_20_20_HELPER_TWENTYTWENTYTWENTYTIMER_H
 
-class Timer {
+class TwentyTwentyTwentyTimer {
 public:
-    Timer(const double &longTimerInterval, const double &shortTimerInterval, const bool &running);
+    TwentyTwentyTwentyTimer(const double &longTimerInterval, const double &shortTimerInterval, const bool &running);
 
-    virtual ~Timer();
+    virtual ~TwentyTwentyTwentyTimer();
 
     double getLongTimerInterval() const;
 
@@ -30,4 +30,4 @@ private:
 };
 
 
-#endif //INC_20_20_20_HELPER_TIMER_H
+#endif //INC_20_20_20_HELPER_TWENTYTWENTYTWENTYTIMER_H

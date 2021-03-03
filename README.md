@@ -3,12 +3,17 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 
 
 ##  to-dos
-- add a pop-up window for both timings -> GTKMM
-  -> see example https://de.wikipedia.org/wiki/Gtkmm
-- write tests
+- Timer should only measure time and the Window creator should only create a pop up window 
+- NotificationManager should manage the Timer and the Window pop ups
+  in form of composition
+- NotificationManager composites the Timer and the Window class
+	- function twentyTwentyTwentyTimer should be in NotificationManager
+- pop up window should automatically close if 20 seconds passed	
+- beautify pop up window
 - find a way to check if the screen is active
 	- based on screen inactivity pause the Timer
 	- if screen changed to active again, resume the Timer or restart it
+- write tests
 - add CI with Dockerfile
 
 ## dependencies
