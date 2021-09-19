@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     auto app = Gtk::Application::create(argc, argv,"org.gtkmm.examples.base");
 
     const string title = "20 20 20";
-    const string label = " 20 sekunden lang auf einen 20 Fuß (ca. 6m) entfernten Punkt gucken, \n um die Augen zu entspannen! ";
+    const string label = " 20 Sekunden lang auf einen 20 Fuß (ca. 6m) entfernten Punkt gucken, \n um die Augen zu entspannen! ";
     const int height = 400;
     const int width = 400;
 
