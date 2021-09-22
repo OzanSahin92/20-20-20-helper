@@ -5,28 +5,26 @@
 #ifndef INC_20_20_20_HELPER_TWENTYTWENTYTWENTYTIMER_H
 #define INC_20_20_20_HELPER_TWENTYTWENTYTWENTYTIMER_H
 
+#include <chrono>
+#include <deque>
+
 class TwentyTwentyTwentyTimer {
 public:
-    TwentyTwentyTwentyTimer(const double &longTimerInterval, const double &shortTimerInterval, const bool &running);
+    TwentyTwentyTwentyTimer(double timerStartTime, bool timerStarted);
 
     virtual ~TwentyTwentyTwentyTimer();
 
-    double getLongTimerInterval() const;
+    void start();
 
-    void setLongTimerInterval(double longTimerInterval);
+    void stop();
 
-    double getShortTimerInterval() const;
+    bool isTimerStarted() const;
 
-    void setShortTimerInterval(double shortTimerInterval);
-
-    void twentyTwentyTwentyTimer();
+    bool check20MinutesPassed();
 
 private:
-    double secondsToMicroseconds() const;
-    double minutesToMicroseconds() const;
-    double _longTimerInterval;
-    double _shortTimerInterval;
-    bool _running;
+    double _timerStartTime;
+    bool _timerStarted;
 };
 
 

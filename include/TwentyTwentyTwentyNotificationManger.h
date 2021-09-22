@@ -7,6 +7,9 @@
 
 #include "TwentyTwentyTwentyWindow.h"
 #include "TwentyTwentyTwentyTimer.h"
+#include "TwentyTwentyTwentyScreenLockChecker.h"
+#include <unistd.h>
+#include <iostream>
 
 class TwentyTwentyTwentyNotificationManger {
 public:
@@ -14,6 +17,7 @@ public:
 
     virtual ~TwentyTwentyTwentyNotificationManger();
 
+    void work();
 
 private:
     TwentyTwentyTwentyWindow *_window;

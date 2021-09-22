@@ -3,54 +3,39 @@
 //
 
 #include "../include/TwentyTwentyTwentyTimer.h"
-#include <unistd.h>
-#include <cmath>
-#include <iostream>
 
-TwentyTwentyTwentyTimer::TwentyTwentyTwentyTimer(const double &longTimerInterval, const double &shortTimerInterval,
-                                                 const bool &running) : _longTimerInterval(
-        longTimerInterval),
-                                                                        _shortTimerInterval(
-                                                                                shortTimerInterval),
-                                                                        _running(running) {}
+TwentyTwentyTwentyTimer::TwentyTwentyTwentyTimer(double timerStartTime, bool timerStarted) : _timerStartTime(
+        timerStartTime), _timerStarted(timerStarted) {}
 
-double TwentyTwentyTwentyTimer::getLongTimerInterval() const {
-    return _longTimerInterval;
+void TwentyTwentyTwentyTimer::start() {
+    auto current_time = std::chrono::system_clock::now();
+    auto duration_in_seconds = std::chrono::duration<double>(current_time.time_since_epoch());
+
+    double num_seconds = duration_in_seconds.count();
+    _timerStartTime = num_seconds;
+    _timerStarted = true;
 }
 
-void TwentyTwentyTwentyTimer::setLongTimerInterval(double longTimerInterval) {
-    _longTimerInterval = longTimerInterval;
+void TwentyTwentyTwentyTimer::stop() {
+    _timerStartTime = 0;
+    _timerStarted = false;
 }
 
-double TwentyTwentyTwentyTimer::getShortTimerInterval() const {
-    return _shortTimerInterval;
-}
+bool TwentyTwentyTwentyTimer::check20MinutesPassed() {
+    auto current_time = std::chrono::system_clock::now();
+    auto duration_in_seconds = std::chrono::duration<double>(current_time.time_since_epoch());
 
-void TwentyTwentyTwentyTimer::setShortTimerInterval(double shortTimerInterval) {
-    _shortTimerInterval = shortTimerInterval;
-}
+    double num_seconds = duration_in_seconds.count();
 
-void TwentyTwentyTwentyTimer::twentyTwentyTwentyTimer() {
-
-    while (_running) {
-        usleep(minutesToMicroseconds());
-        std::cout << '\a';
-        std::cout << "First alarm!" << std::endl;
-        usleep(secondsToMicroseconds());
-        std::cout << '\a';
-        std::cout << "Second alarm!" << std::endl;
+    if (num_seconds - _timerStartTime >= 1200) {
+        return true;
+    } else {
+        return false;
     }
-
 }
 
-double TwentyTwentyTwentyTimer::minutesToMicroseconds() const {
-    double microsecondsFromMinutes = _longTimerInterval * 6 * pow(10, 7);
-    return microsecondsFromMinutes;
-}
-
-double TwentyTwentyTwentyTimer::secondsToMicroseconds() const {
-    double microsecondsFromSeconds = _shortTimerInterval * pow(10, 6);
-    return microsecondsFromSeconds;
+bool TwentyTwentyTwentyTimer::isTimerStarted() const {
+    return _timerStarted;
 }
 
 TwentyTwentyTwentyTimer::~TwentyTwentyTwentyTimer() = default;
