@@ -2,7 +2,7 @@
 // Created by mrerzincan on 22.09.21.
 //
 
-#include "../include/TwentyTwentyTwentyScreenLockChecker.h"
+#include "TwentyTwentyTwentyScreenLockChecker.h"
 
 TwentyTwentyTwentyScreenLockChecker::TwentyTwentyTwentyScreenLockChecker() = default;
 

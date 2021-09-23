@@ -2,7 +2,7 @@
 // Created by ozan on 03.03.21.
 //
 
-#include "../include/TwentyTwentyTwentyWindow.h"
+#include "TwentyTwentyTwentyWindow.h"
 #include <iostream>
 #include <utility>
 #include <gtkmm-3.0/gtkmm/label.h>

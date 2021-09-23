@@ -1,8 +1,8 @@
 #include <iostream>
-#include "../include/TwentyTwentyTwentyTimer.h"
+#include "TwentyTwentyTwentyTimer.h"
 #include <gtkmm-3.0/gtkmm.h>
-#include "../include/TwentyTwentyTwentyWindow.h"
-#include "../include/TwentyTwentyTwentyNotificationManger.h"
+#include "TwentyTwentyTwentyWindow.h"
+#include "TwentyTwentyTwentyNotificationManger.h"
 
 using namespace Gtk;
 

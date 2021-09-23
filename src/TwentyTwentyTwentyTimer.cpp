@@ -2,7 +2,7 @@
 // Created by mrerzincan on 13.12.20.
 //
 
-#include "../include/TwentyTwentyTwentyTimer.h"
+#include "TwentyTwentyTwentyTimer.h"
 
 TwentyTwentyTwentyTimer::TwentyTwentyTwentyTimer(double timerStartTime, bool timerStarted) : _timerStartTime(
         timerStartTime), _timerStarted(timerStarted) {}
