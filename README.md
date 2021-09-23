@@ -3,7 +3,7 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 
 
 ##  to-dos
-- Find a way to determine if screen is locked or not (dbus? https://stackoverflow.com/questions/34590045/dbus-screensaver-activechanged-signals-not-emitted-from-ubuntu https://www.linuxjournal.com/article/10455 https://forum.kde.org/viewtopic.php?f=66&t=136893 https://askubuntu.com/questions/854745/how-to-make-a-script-that-interacts-with-screen-lock-unlock https://unix.stackexchange.com/questions/86221/how-can-i-lock-my-screen-in-gnome-3-without-gdm)
+- Find a way to determine if screen is locked or not (dbus? https://stackoverflow.com/questions/34590045/dbus-screensaver-activechanged-signals-not-emitted-from-ubuntu https://www.linuxjournal.com/article/10455 https://forum.kde.org/viewtopic.php?f=66&t=136893 https://askubuntu.com/questions/854745/how-to-make-a-script-that-interacts-with-screen-lock-unlock https://unix.stackexchange.com/questions/86221/how-can-i-lock-my-screen-in-gnome-3-without-gdm https://stackoverflow.com/questions/8906250/how-to-detect-workstation-system-screen-lock-in-ubuntu-using-java/8906348)
 - gnome-screensaver seems to do the trick; check the source code of it (https://gitlab.gnome.org/Archive/gnome-screensaver/-/blob/master/src/gnome-screensaver-command.c)
 - code ScreenLockChecker and Window
 - Timer should only measure time and the Window creator should only create a pop up window 
