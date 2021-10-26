@@ -2,6 +2,7 @@
 small tool that helps to pay attention to the 20-20-20 rule for better eye health
 
 ## important links
+- https://developer-old.gnome.org/gtkmm-tutorial/stable/sec-basics-simple-example.html.en
 - https://stackoverflow.com/questions/34590045/dbus-screensaver-activechanged-signals-not-emitted-from-ubuntu 
 - https://www.linuxjournal.com/article/10455 
 - https://forum.kde.org/viewtopic.php?f=66&t=136893 
