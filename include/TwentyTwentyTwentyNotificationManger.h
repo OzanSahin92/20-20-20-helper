@@ -10,16 +10,21 @@
 #include "TwentyTwentyTwentyScreenLockChecker.h"
 #include <unistd.h>
 #include <iostream>
+#include <gtkmm-3.0/gtkmm.h>
+
+using namespace Gtk;
 
 class TwentyTwentyTwentyNotificationManger {
 public:
-    TwentyTwentyTwentyNotificationManger(TwentyTwentyTwentyWindow *window, const TwentyTwentyTwentyTimer &timer);
+    TwentyTwentyTwentyNotificationManger(Glib::RefPtr<Application> *app, TwentyTwentyTwentyWindow *window,
+                                         const TwentyTwentyTwentyTimer &timer);
 
     virtual ~TwentyTwentyTwentyNotificationManger();
 
     void work();
 
 private:
+    Glib::RefPtr<Application> *_app;
     TwentyTwentyTwentyWindow *_window;
     TwentyTwentyTwentyTimer _timer;
 };

@@ -4,9 +4,11 @@
 
 #include "TwentyTwentyTwentyNotificationManger.h"
 
-TwentyTwentyTwentyNotificationManger::TwentyTwentyTwentyNotificationManger(TwentyTwentyTwentyWindow *window,
+
+TwentyTwentyTwentyNotificationManger::TwentyTwentyTwentyNotificationManger(Glib::RefPtr<Application> *app,
+                                                                           TwentyTwentyTwentyWindow *window,
                                                                            const TwentyTwentyTwentyTimer &timer)
-        : _window(window), _timer(timer) {}
+        : _app(app), _window(window), _timer(timer) {}
 
 TwentyTwentyTwentyNotificationManger::~TwentyTwentyTwentyNotificationManger() = default;
 
@@ -25,9 +27,7 @@ void TwentyTwentyTwentyNotificationManger::work() {
             }
             if (_timer.check20MinutesPassed()) {
                 std::cout << "20 minutes passed" << std::endl;
-                /*
-                 * display TwentyTwentyTwentyWindow
-                 */
+                _app->run(_window);
                 _timer.stop();
             } else {
                 std::cout << "20 minutes did not pass" << std::endl;

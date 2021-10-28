@@ -12,7 +12,7 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 - https://gitlab.gnome.org/Archive/gnome-screensaver/-/blob/master/src/gnome-screensaver-command.c
 
 ##  to-dos 
-- debug segfault in TwentyTwentyTwentyTimer
+- error: ‘class Glib::RefPtr<Gtk::Application>’ has no member named ‘run’ debuggen
 - debug code ScreenLockChecker
 - code Window
 - Timer should only measure time and the Window creator should only create a pop up window 
