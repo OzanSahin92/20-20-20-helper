@@ -11,8 +11,7 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 - https://stackoverflow.com/questions/8906250/how-to-detect-workstation-system-screen-lock-in-ubuntu-using-java/8906348
 - https://gitlab.gnome.org/Archive/gnome-screensaver/-/blob/master/src/gnome-screensaver-command.c
 
-##  to-dos 
-- error: ‘class Glib::RefPtr<Gtk::Application>’ has no member named ‘run’ debuggen
+##  to-dos
 - debug code ScreenLockChecker
 - code Window
 - Timer should only measure time and the Window creator should only create a pop up window 

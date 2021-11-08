@@ -11,12 +11,14 @@
 #include <unistd.h>
 #include <iostream>
 #include <gtkmm-3.0/gtkmm.h>
+#include <gtkmm/application.h>
 
 using namespace Gtk;
 
 class TwentyTwentyTwentyNotificationManger {
 public:
-    TwentyTwentyTwentyNotificationManger(Glib::RefPtr<Application> *app, TwentyTwentyTwentyWindow *window,
+    TwentyTwentyTwentyNotificationManger(Glib::RefPtr<Application> app,
+                                         TwentyTwentyTwentyWindow *window,
                                          const TwentyTwentyTwentyTimer &timer);
 
     virtual ~TwentyTwentyTwentyNotificationManger();
@@ -24,7 +26,7 @@ public:
     void work();
 
 private:
-    Glib::RefPtr<Application> *_app;
+    Glib::RefPtr<Application> _app;
     TwentyTwentyTwentyWindow *_window;
     TwentyTwentyTwentyTimer _timer;
 };
