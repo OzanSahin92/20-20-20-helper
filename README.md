@@ -13,16 +13,14 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 
 ##  to-dos
 - debug code ScreenLockChecker
-- code Window
-- Timer should only measure time and the Window creator should only create a pop up window 
-- NotificationManager should manage the Timer, the Window and the ScreenLockChanger
-- NotificationManager composites the Timer, Window and the ScreenLockChecker class
-    - function twentyTwentyTwentyTimer should be in NotificationManager
+  - after screen lock and new timer initialization SIGSEV with the following message:
+    GLib-GIO-CRITICAL **: g_application_parse_command_line: assertion '!application->priv->options_parsed' failed
 - beautify pop up window
-
-- write a 20-20-20.service file to create a systemd service
 - write tests
+
+### optional to-dos
 - add CI with Dockerfile
+- add options to main.cpp (f.e. goptions)
 
 ## dependencies
 - install gtmm: sudo apt-get install libgtkmm-3.0-dev

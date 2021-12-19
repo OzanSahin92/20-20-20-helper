@@ -108,7 +108,10 @@ bool TwentyTwentyTwentyScreenLockChecker::screenLocked() {
     GDBusConnection *connection;
     GDBusMessage *reply;
     GVariant *body;
+    GError *error = nullptr;
     gboolean v;
+
+    connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
 
     if (!screensaver_is_running(connection)) {
         std::cout << "Screensaver is not running!" << std::endl;

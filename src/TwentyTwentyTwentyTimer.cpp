@@ -27,7 +27,7 @@ bool TwentyTwentyTwentyTimer::check20MinutesPassed() {
 
     double num_seconds = duration_in_seconds.count();
 
-    if (num_seconds - _timerStartTime >= 1200) {
+    if (num_seconds - _timerStartTime >= 60) {
         return true;
     } else {
         return false;

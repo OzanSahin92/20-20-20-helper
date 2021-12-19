@@ -34,6 +34,7 @@ void TwentyTwentyTwentyNotificationManger::work() {
                 std::cout << "20 minutes did not pass" << std::endl;
             }
         }
+        std::cout << "\n\n\n";
         usleep(500000);
     }
 }
