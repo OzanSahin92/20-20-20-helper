@@ -127,10 +127,8 @@ bool TwentyTwentyTwentyScreenLockChecker::screenLocked() {
     g_object_unref(reply);
 
     if (v) {
-        std::cout << "The screen is locked" << std::endl;
         return true;
     } else {
-        std::cout << "The screen is not locked" << std::endl;
         return false;
     }
 }
