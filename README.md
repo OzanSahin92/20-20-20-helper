@@ -21,4 +21,5 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 - add options to main.cpp (f.e. goptions)
 
 ## dependencies
-- install gtkmm: sudo apt-get install libgtkmm-3.0-dev
+- install gtkmm: apt-get install libgtkmm-3.0-dev
+- install gnome screensaver to test with checkScreenStatus.sh: apt-get install gnome-screensaver
