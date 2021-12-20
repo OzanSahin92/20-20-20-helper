@@ -17,18 +17,17 @@ using namespace Gtk;
 
 class TwentyTwentyTwentyNotificationManger {
 public:
-    TwentyTwentyTwentyNotificationManger(Glib::RefPtr<Application> app,
-                                         TwentyTwentyTwentyWindow *window,
-                                         const TwentyTwentyTwentyTimer &timer);
+    TwentyTwentyTwentyNotificationManger(const TwentyTwentyTwentyTimer &timer,
+                                         TwentyTwentyTwentyScreenLockChecker screenLockChecker);
 
     virtual ~TwentyTwentyTwentyNotificationManger();
 
     void work();
 
 private:
-    Glib::RefPtr<Application> _app;
     TwentyTwentyTwentyWindow *_window;
     TwentyTwentyTwentyTimer _timer;
+    TwentyTwentyTwentyScreenLockChecker _screenLockChecker;
 };
 
 

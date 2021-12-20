@@ -5,17 +5,16 @@
 #include "TwentyTwentyTwentyNotificationManger.h"
 
 
-TwentyTwentyTwentyNotificationManger::TwentyTwentyTwentyNotificationManger(Glib::RefPtr<Application> app,
-                                                                           TwentyTwentyTwentyWindow *window,
-                                                                           const TwentyTwentyTwentyTimer &timer)
-        : _app(app), _window(window), _timer(timer) {}
+TwentyTwentyTwentyNotificationManger::TwentyTwentyTwentyNotificationManger(const TwentyTwentyTwentyTimer &timer,
+                                                                           TwentyTwentyTwentyScreenLockChecker screenLockChecker)
+        : _timer(timer), _screenLockChecker(screenLockChecker) {}
 
 TwentyTwentyTwentyNotificationManger::~TwentyTwentyTwentyNotificationManger() = default;
 
 void TwentyTwentyTwentyNotificationManger::work() {
 
     while (true) {
-        if (TwentyTwentyTwentyScreenLockChecker::screenLocked()) {
+        if (_screenLockChecker.screenLocked()) {
             std::cout << "Screen is locked" << std::endl;
             _timer.stop();
         } else {
@@ -28,8 +27,14 @@ void TwentyTwentyTwentyNotificationManger::work() {
             }
             if (_timer.check20MinutesPassed()) {
                 std::cout << "20 minutes passed" << std::endl;
-                _app->run(*_window);
+                auto app = Gtk::Application::create("org.gtkmm.examples.base");
+                _window = new TwentyTwentyTwentyWindow("20 20 20",
+                                                       " 20 Sekunden lang auf einen 20 Fuß (ca. 6m) entfernten Punkt gucken, \n um die Augen zu entspannen! \n\n\n"
+                                                       "Schließe dieses Fenster, wenn 20 Sekunden vergangen sind \n und der Timer startet neu! ",
+                                                       400, 400);
+                app->run(*_window);
                 _timer.stop();
+                delete _window;
             } else {
                 std::cout << "20 minutes did not pass" << std::endl;
             }

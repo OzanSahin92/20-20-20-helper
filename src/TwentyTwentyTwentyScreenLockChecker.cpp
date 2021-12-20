@@ -3,8 +3,6 @@
 //
 
 #include "TwentyTwentyTwentyScreenLockChecker.h"
-#include <glib.h>
-#include <gio/gio.h>
 #include <iostream>
 
 /* Gnome Screensaver */
@@ -17,7 +15,11 @@
 #define DBUS_PATH                       "/org/freedesktop/DBus"
 #define DBUS_INTERFACE                  "org.freedesktop.DBus"
 
-TwentyTwentyTwentyScreenLockChecker::TwentyTwentyTwentyScreenLockChecker() = default;
+TwentyTwentyTwentyScreenLockChecker::TwentyTwentyTwentyScreenLockChecker() {
+    GError *error = nullptr;
+    _connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
+
+};
 
 TwentyTwentyTwentyScreenLockChecker::~TwentyTwentyTwentyScreenLockChecker() = default;
 
@@ -105,19 +107,16 @@ screensaver_send_message_void(GDBusConnection *connection,
 }
 
 bool TwentyTwentyTwentyScreenLockChecker::screenLocked() {
-    GDBusConnection *connection;
     GDBusMessage *reply;
     GVariant *body;
     GError *error = nullptr;
     gboolean v;
 
-    connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, &error);
-
-    if (!screensaver_is_running(connection)) {
+    if (!screensaver_is_running(_connection)) {
         std::cout << "Screensaver is not running!" << std::endl;
     }
 
-    reply = screensaver_send_message_void(connection, "GetActive", TRUE);
+    reply = screensaver_send_message_void(_connection, "GetActive", TRUE);
     if (reply == NULL) {
         std::cout << "Did not receive a reply from the screensaver." << std::endl;
     }

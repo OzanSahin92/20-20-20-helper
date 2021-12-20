@@ -5,15 +5,19 @@
 #ifndef INC_20_20_20_HELPER_TWENTYTWENTYTWENTYSCREENLOCKCHECKER_H
 #define INC_20_20_20_HELPER_TWENTYTWENTYTWENTYSCREENLOCKCHECKER_H
 
+#include <glib.h>
+#include <gio/gio.h>
+
 class TwentyTwentyTwentyScreenLockChecker {
 public:
     TwentyTwentyTwentyScreenLockChecker();
 
     virtual ~TwentyTwentyTwentyScreenLockChecker();
 
-    static bool screenLocked();
+    bool screenLocked();
 
 private:
+    GDBusConnection *_connection;
 
 
 };
