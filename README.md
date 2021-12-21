@@ -12,9 +12,6 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 - https://gitlab.gnome.org/Archive/gnome-screensaver/-/blob/master/src/gnome-screensaver-command.c
 - https://stackoverflow.com/questions/57819514/assertion-fails-in-g-application-parse-command-line-whenever-gtk-application-run
 
-##  to-dos
-- write tests
-
 ### optional to-dos
 - beautify pop up window
 - add CI with Dockerfile
