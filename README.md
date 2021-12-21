@@ -12,9 +12,6 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 - https://gitlab.gnome.org/Archive/gnome-screensaver/-/blob/master/src/gnome-screensaver-command.c
 - https://stackoverflow.com/questions/57819514/assertion-fails-in-g-application-parse-command-line-whenever-gtk-application-run
 
-##  to-dos
-- write tests
-
 ### optional to-dos
 - beautify pop up window
 - add CI with Dockerfile
@@ -23,3 +20,4 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 ## dependencies
 - install gtkmm: apt-get install libgtkmm-3.0-dev
 - install gnome screensaver to test with checkScreenStatus.sh: apt-get install gnome-screensaver
+- install gtest: apt-get install libgtest-dev
