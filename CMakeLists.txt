@@ -18,6 +18,6 @@ file(GLOB SrcFiles src/*.cpp )
 add_executable(20_20_20_helper src/main.cpp ${SrcFiles})
 
 target_link_libraries(20_20_20_helper
-        ${GTKMM_LIBRARIES}  )
+        ${GTKMM_LIBRARIES})
 
 add_subdirectory(test)

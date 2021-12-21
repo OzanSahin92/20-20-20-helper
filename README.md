@@ -23,3 +23,4 @@ small tool that helps to pay attention to the 20-20-20 rule for better eye healt
 ## dependencies
 - install gtkmm: apt-get install libgtkmm-3.0-dev
 - install gnome screensaver to test with checkScreenStatus.sh: apt-get install gnome-screensaver
+- install gtest: apt-get install libgtest-dev
