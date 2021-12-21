@@ -1,7 +1,6 @@
 file(GLOB TestSrcFiles ../src/TwentyTwentyTwentyScreenLockChecker.cpp  ../src/TwentyTwentyTwentyTimer.cpp)
 
 add_executable(gtest gTest.cpp
-        HelloworldTestCase.cpp
         testTwentyTwentyTwentyScreenLockChecker.cpp
         testTwentyTwentyTwentyTimer.cpp
         ${TestSrcFiles})
