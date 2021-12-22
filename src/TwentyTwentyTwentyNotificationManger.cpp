@@ -6,7 +6,7 @@
 
 
 TwentyTwentyTwentyNotificationManger::TwentyTwentyTwentyNotificationManger(const TwentyTwentyTwentyTimer &timer,
-                                                                           TwentyTwentyTwentyScreenLockChecker screenLockChecker)
+                                                                           const TwentyTwentyTwentyScreenLockChecker &screenLockChecker)
         : _timer(timer), _screenLockChecker(screenLockChecker) {}
 
 TwentyTwentyTwentyNotificationManger::~TwentyTwentyTwentyNotificationManger() = default;

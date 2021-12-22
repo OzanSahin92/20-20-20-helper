@@ -18,7 +18,7 @@ using namespace Gtk;
 class TwentyTwentyTwentyNotificationManger {
 public:
     TwentyTwentyTwentyNotificationManger(const TwentyTwentyTwentyTimer &timer,
-                                         TwentyTwentyTwentyScreenLockChecker screenLockChecker);
+                                         const TwentyTwentyTwentyScreenLockChecker &screenLockChecker);
 
     virtual ~TwentyTwentyTwentyNotificationManger();
 
